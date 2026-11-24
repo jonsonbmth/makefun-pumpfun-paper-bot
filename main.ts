@@ -4,6 +4,8 @@
 // Fully deterministic: no clock, no randomness, no network.
 
 import { runBot } from './vendor/makefun-bot.ts';
-import { createStrategy, DEFAULT_PARAMS } from './strategy.ts';
+import { createStrategy } from './strategy.ts';
+import { DEFAULT_PARAMS } from './strategy.ts';
 
-await runBot(createStrategy(DEFAULT_PARAMS));
+const bot = createStrategy(DEFAULT_PARAMS);
+await runBot(bot);
